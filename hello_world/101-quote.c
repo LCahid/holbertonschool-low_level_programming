@@ -12,6 +12,9 @@ int main(void)
 	int l = strlen(a);
 	int i;
 
-	for (i = 0; i < l; i++) putchar(a[i]);
+	for (i = 0; i < l; i++)
+	{
+		putchar(a[i]);
+	}
 	return (1);
 }
