@@ -6,15 +6,16 @@
  */
 int main(void)
 {
-	char a = 'a';
+	char a = 96;
 
 	do {
+		a++;
 		if (a == 'z')
 		{
+			putchar(a);
 			a = 'A';
 		}
 		putchar(a);
-		a++;
 	} while (a != 'Z');
 	putchar('\n');
 	return (0);
