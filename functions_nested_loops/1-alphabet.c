@@ -12,7 +12,7 @@ void print_alphabet(void)
 	char a[] = "abcdefghijklmnopqrstuvwxyz";
 	int i = 0;
 
-	while(a[i] != '\0')
+	while (a[i] != '\0')
 	{
 		_putchar(a[i]);
 		i++;
