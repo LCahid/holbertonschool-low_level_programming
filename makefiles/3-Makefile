@@ -13,7 +13,7 @@ re: fclean all
 fclean: clean oclean 
 
 clean: oclean
-	$(RM) *~
+	$(RM) *~ $(NAME)
 
 oclean: 
 	$(RM) *.o
