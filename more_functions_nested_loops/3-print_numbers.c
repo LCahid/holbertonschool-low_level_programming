@@ -7,7 +7,7 @@
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-void print_number(void)
+void print_numbers(void)
 {
 	int i;
 
