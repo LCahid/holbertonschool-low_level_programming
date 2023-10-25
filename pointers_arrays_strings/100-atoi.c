@@ -3,8 +3,7 @@
 /**
   * _atoi - reset to 98
   *
-  * @dest: num
-  * @src: num
+  * @s: num
   * Return: length
  */
 int _atoi(char *s)
