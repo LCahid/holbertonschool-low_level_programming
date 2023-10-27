@@ -9,7 +9,7 @@
 
 char *leet(char *s)
 {
-	int i = 0, j, temp;
+	int i = 0, temp;
 	char h[20];
 
 	h[0] = '4';
@@ -23,7 +23,7 @@ char *leet(char *s)
 		if (s[i] == 'a' || s[i] == 'A' || s[i] == 'e' || s[i] == 'E' || s[i] == 'o'
 				|| s[i] == 'O' || s[i] == 'T' || s[i] == 't' || s[i] == 'L' || s[i] == 'l')
 		{
-			for (j = s[i]; s[i] > 90; j++)
+			for (; s[i] > 90;)
 			{
 				s[i] -= 32;
 			}
