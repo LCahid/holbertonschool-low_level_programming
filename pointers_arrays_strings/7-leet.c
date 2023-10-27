@@ -11,6 +11,7 @@ char *leet(char *s)
 {
 	int i = 0, j, temp;
 	char h[20];
+
 	h[0] = '4';
 	h[4] = '3';
 	h[11] = '1';
