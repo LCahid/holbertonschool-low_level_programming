@@ -23,6 +23,13 @@ char *cap_string(char *s)
 				}
 			}
 		}
+		else
+		{
+			if (s[i] >= 97 && s[i] <= 122)
+			{
+				s[i] -= 32;
+			}
+		}
 		i++;
 	}
 	return (s);
