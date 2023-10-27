@@ -3,7 +3,7 @@
 /**
   * string_toupper - reset to 98
   *
-  * @c: num
+  * @s: num
   *
   * Return: length
  */
