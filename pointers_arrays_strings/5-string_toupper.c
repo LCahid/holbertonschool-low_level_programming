@@ -1,23 +1,25 @@
+#include "main.h"
 #include <stdio.h>
 #include <string.h>
+
 /**
-  * string_toupper - reset to 98
-  *
-  * @s: num
-  *
-  * Return: length
+ * string_toupper - reverse an array of integers
+ *
+ * @s:var
+ *
+ * Return: nothing.
  */
 char *string_toupper(char *s)
 {
-	int i = 0;
+	int i;
+	int l = strlen(s);
 
-	while (s[i])
+	for (i = 0; i < l; i++)
 	{
 		if (s[i] >= 97 && s[i] <= 122)
 		{
-			s[i] -= 32;
+			s[i] = s[i] - 32;
 		}
-		i++;
 	}
 	return (s);
 }

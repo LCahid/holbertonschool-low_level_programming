@@ -1,20 +1,23 @@
+#include "main.h"
 #include <stdio.h>
 #include <string.h>
 /**
-  * _strcat - reset to 98
-  *
-  * @dest: num
-  * @src: num
-  * Return: length
+ * _strcat - Write a function that convert a string to an integer.
+ *
+ * @dest: pointer
+ * @src: pointer
+ * Return: Always 0.
  */
 char *_strcat(char *dest, char *src)
 {
-	int i = 0, j = strlen(dest);
+	int i, j;
+	int ld = strlen(dest);
 
-	while (src[i] != '\0')
+	j = ld;
+
+	for (i = 0; src[i] != '\0'; i++)
 	{
 		dest[j] = src[i];
-		i++;
 		j++;
 	}
 	dest[j] = '\0';

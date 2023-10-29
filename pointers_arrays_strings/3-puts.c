@@ -1,18 +1,25 @@
 #include "main.h"
+#include <stdio.h>
+#include <string.h>
 /**
-  * _puts - reset to 98
-  *
-  * @str: str
-  * Return: length
-  */
+* _puts - prints a string
+* @str:pointer
+*
+* Return: Always 0.
+*/
 void _puts(char *str)
 {
-	int i = 0;
+	int i = 0, j = 0;
+	char *s = str;
 
-	while (str[i] != '\0')
+	while (*str != '\0')
 	{
-		_putchar(str[i]);
 		i++;
+		str++;
+	}
+	for (j = 0 ; j < i ; j++)
+	{
+		_putchar(s[j]);
 	}
 	_putchar('\n');
 }

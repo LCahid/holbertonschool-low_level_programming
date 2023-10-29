@@ -1,19 +1,19 @@
 #include "main.h"
+#include <stdio.h>
 #include <string.h>
 /**
-  * puts2 - reset to 98
-  *
-  * @str: str
-  * Return: length
- */
+* puts2 - prints a string
+* @str:pointer
+*
+* Return: Always 0.
+*/
 void puts2(char *str)
 {
 	int i;
-	int l = strlen(str);
 
-	for (i = 0; i < l; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (!(i % 2))
+		if (i % 2 == 0)
 		{
 			_putchar(str[i]);
 		}

@@ -1,23 +1,27 @@
 #include "main.h"
+#include <stdio.h>
 #include <string.h>
 /**
-  * puts_half - reset to 98
-  *
-  * @str: str
-  * Return: length
- */
+* puts_half - prints a string
+* @str:pointer
+*
+* Return: Always 0.
+*/
 void puts_half(char *str)
 {
-	int i, s = 0;
+	int i, a;
 	int l = strlen(str);
 
-	for (i = l / 2; i < l; i++)
+	if (l % 2 == 1)
 	{
-		if (l % 2 && !s)
-		{
-			i = (l + 1) / 2;
-			s = 1;
-		}
+		a = (l + 1) / 2;
+	}
+	else
+	{
+		a = l / 2;
+	}
+	for (i = a; i < l; i++)
+	{
 		_putchar(str[i]);
 	}
 	_putchar('\n');

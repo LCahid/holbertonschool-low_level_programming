@@ -1,27 +1,36 @@
+#include "main.h"
 #include <stdio.h>
 #include <string.h>
 /**
-  * _strncpy - reset to 98
-  *
-  * @dest: num
-  * @src: num
-  * @n: num
-  * Return: length
+ * _strncpy - Write a function that convert a string to an integer.
+ *
+ * @dest: pointer
+ * @src: pointer
+ * @n: var
+ * Return: Always 0.
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i = 0;
-	int l = strlen(src);
+	int size2 = strlen(src), j;
 
-	while (i < n)
+	if (n >= size2)
 	{
-		if (i < l)
-			dest[i] = src[i];
-		else
+		for (j = 0 ; j < size2 ; j++)
 		{
-			dest[i] = '\0';
+			*(dest + j) = *(src + j);
 		}
-		i++;
+		for (; j < n ; j++)
+			*(dest + j) = '\0';
+
+		return (dest);
 	}
-	return (dest);
+	else
+	{
+		for (j = 0 ; j < n ; j++)
+		{
+			*(dest + j) = *(src + j);
+		}
+
+		return (dest);
+	}
 }

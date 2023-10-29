@@ -1,36 +1,23 @@
 #include "main.h"
+#include <stdio.h>
 #include <string.h>
 /**
-  * cap_string - reset to 98
-  *
-  * @s: str
-  * Return: length
- */
-
+* cap_string - prints a string
+* @s:pointer
+*
+* Return: Always 0.
+*/
 char *cap_string(char *s)
 {
-	int i = 0;
+	int i;
+	int l = strlen(s);
 
-	while (s[i])
+	for (i = 0; i < l; i++)
 	{
-		if (i != 0)
+		if (s[i] >= 97 && s[i] <= 122 && s[i - 1] < 48 && s[i -  1] != 45)
 		{
-			if (s[i - 1] < 48 && s[i - 1] != '-')
-			{
-				if (s[i] >= 97 && s[i] <= 122)
-				{
-					s[i] -= 32;
-				}
-			}
+			s[i] = s[i] - 32;
 		}
-		else
-		{
-			if (s[i] >= 97 && s[i] <= 122)
-			{
-				s[i] -= 32;
-			}
-		}
-		i++;
 	}
 	return (s);
 }

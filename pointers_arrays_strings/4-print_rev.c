@@ -1,20 +1,20 @@
 #include "main.h"
+#include <stdio.h>
 #include <string.h>
 /**
-  * print_rev - reset to 98
-  *
-  * @s: str
-  * Return: length
-  */
+* print_rev - prints a string
+* @s:pointer
+*
+* Return: Always 0.
+*/
 void print_rev(char *s)
 {
-	int i = 0;
+	int i;
 	int l = strlen(s);
 
-	while (s[i] != '\0')
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		_putchar(s[l - i - 1]);
-		i++;
 	}
 	_putchar('\n');
 }

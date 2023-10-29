@@ -1,22 +1,21 @@
+#include "main.h"
 #include <stdio.h>
-#include <string.h>
+
 /**
-  * reverse_array - reset to 98
-  *
-  * @a: num
-  * @n: num
-  *
-  * Return: length
+ * reverse_array - reverse an array of integers
+ * @a: an array of integers
+ * @n: the number of elements to swap
+ *
+ * Return: nothing.
  */
 void reverse_array(int *a, int n)
 {
-	int i = 0, temp;
+	int i, x;
 
 	for (i = 0; i < n / 2; i++)
 	{
-		temp = a[i];
-		a[i] = a[n - i - 1];
-		a[n - i - 1] = temp;
+		x = a[n - 1 - i];
+		a[n - 1 - i] = a[i];
+		a[i] = x;
 	}
-
 }

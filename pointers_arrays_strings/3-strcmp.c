@@ -1,25 +1,25 @@
-#include <stdio.h>
+#include "main.h"
 #include <string.h>
+
 /**
-  * _strcmp - reset to 98
-  *
-  * @s1: num
-  * @s2: num
-  *
-  * Return: length
+ * _strcmp - compares two strings
+ * @s1: checker
+ * @s2: checker
+ *
+ * Return: Always 0.
  */
 int _strcmp(char *s1, char *s2)
 {
-	int i = 0, p = 0;
+	int i, j = 0, num = 0;
 
-	while (s1[i] != '\0' && s2[i] != '\0')
+	for (i = 0; s1[i] != '\0'; i++)
 	{
-		if (s1[i] != s2[i])
+		if (s1[i] != s2[j])
 		{
-			p = s1[i] - s2[i];
-			break;
+		num = s1[i] - s2[j];
+		break;
 		}
-		i++;
+		j++;
 	}
-	return (p);
+	return (num);
 }

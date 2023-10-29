@@ -1,15 +1,15 @@
 #include "main.h"
+#include <stdio.h>
+#include <string.h>
 /**
-  * _strlen - reset to 98
-  *
-  * @s: str
-  * Return: length
-  */
+* _strlen - check the code
+* @s: pointer
+* Return: Always 0.
+*/
 int _strlen(char *s)
 {
-	int i = 0;
+	int a;
 
-	while (s[i] != '\0')
-		i++;
-	return (i);
+	a = strlen(s);
+	return (a);
 }

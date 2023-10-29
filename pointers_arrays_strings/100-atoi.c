@@ -1,10 +1,9 @@
-#include <stdio.h>
-#include <string.h>
+#include "main.h"
 /**
-  * _atoi - reset to 98
-  *
-  * @s: num
-  * Return: length
+ * _atoi - converts str to int
+ * @s: str
+ *
+ * Return: return
  */
 int _atoi(char *s)
 {
@@ -21,20 +20,17 @@ int _atoi(char *s)
 		{
 			sign *= 1;
 		}
-		else if (s[i] <= 57 && s[i] >= 48)
+		else if (s[i] >= '0' && s[i] <= '9')
 		{
-			num *= 10;
-			num += s[i] - 48;
+			num = num * 10 + s[i] - '0';
 		}
-		else
+		else if (num > 0)
 		{
-			if (num != 0)
-			{
-				break;
-			}
+			break;
 		}
+
 		i++;
+
 	}
-	num *= sign;
-	return (num);
+	return (num * sign);
 }
