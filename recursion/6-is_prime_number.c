@@ -11,7 +11,7 @@ int find_prime(int n, int k)
 		return (1);
 	else if (!(n % k))
 		return (0);
-	else 
+	else
 		return (find_prime(n, k + 1));
 }
 /**
