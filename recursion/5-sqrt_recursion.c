@@ -11,11 +11,11 @@ int _sqrt_recursion(int n)
 		return (-1);
 	return (find_sqrt(n, 1));
 }
-/** 
+/**
   * find_sqrt - find square root
   * @n: num
   * @k: num
-  * Retunr: square root
+  * Return: square root
   */
 int find_sqrt(int n, int k)
 {
