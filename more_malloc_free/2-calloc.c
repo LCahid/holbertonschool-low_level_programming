@@ -3,14 +3,14 @@
 #include <stdlib.h>
 /**
  * _calloc - fills memory
- * @nmemb: str
+ * @nmemb: tr
  * @size: str
  * Return: char
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *buf;
-	int i;
+	unsigned int i;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
