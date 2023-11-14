@@ -2,19 +2,19 @@
 #include <string.h>
 #include <stdlib.h>
 /**
- * alloc_grid - fills memory
- * @width: str
- * @height: str
+ * argstostr - fills memory
+ * @ac: str
+ * @av: str
  * Return: char
  */
-int **alloc_grid(int width, int height)
+char *argstostr(int ac, char **av)
 {
-	int **buf;
+	char *buf;
 	int i, j;
 
-	if (width <= 0 || height <= 0)
+	if (ac == 0 || av == NULL)
 		return (NULL);
-	buf = malloc(sizeof(int *) * height);
+	buf = malloc(sizeof(char) * ac + 1);
 	if (buf == NULL)
 		return (NULL);
 	for (i = 0; i < height; i++)
