@@ -17,9 +17,9 @@ char **strtow(char *str)
 	if (!size)
 		return (NULL);
 	for (i = 0; i < size; i++)
-		if (str[i] != 32 && !s)
+		if (str[i] != 32)
 		{
-			nw++;
+			!s ? nw++ : 0;
 			s = 1;
 		}
 		else
