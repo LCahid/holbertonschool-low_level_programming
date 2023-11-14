@@ -35,7 +35,7 @@ char **strtow(char *str)
 			s = i;
 			while (str[i] != 32 && str[i])
 				i++;
-			buf[j] = malloc(sizeof(char) * (i - s) + 2);
+			buf[j] = malloc(sizeof(char) * (i - s) + 1);
 			while (str[s] != 32 && str[s])
 			{
 				buf[j][e] = str[s];
