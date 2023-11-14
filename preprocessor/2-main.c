@@ -7,7 +7,8 @@
  */
 int main(void)
 {
-    char a[] = __FILE__;
-    printf("%s\n", a);
-    return (0);
+	char a[] = __FILE__;
+
+	printf("%s\n", a);
+	return (0);
 }
