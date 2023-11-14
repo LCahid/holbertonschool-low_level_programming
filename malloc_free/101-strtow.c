@@ -17,20 +17,19 @@ char **strtow(char *str)
 	if (!size)
 		return (NULL);
 	for (i = 0; i < size; i++)
-	{
-		if(str[i] != 32 && !s)
+		if (str[i] != 32 && !s)
 		{
 			nw++;
 			s = 1;
 		}
 		else
 			s = 0;
-	}
+	if (!nw)
+		return (NULL);
 	buf = malloc(sizeof(char *) * nw + 1);
 	if (buf == NULL)
 		return (NULL);
 	for (i = 0; i < size; i++)
-	{
 		if (str[i] != 32)
 		{
 			s = i;
@@ -47,7 +46,6 @@ char **strtow(char *str)
 			e = 0;
 			j++;
 		}
-	}
 	buf[j] = NULL;
 	return (buf);
 }
