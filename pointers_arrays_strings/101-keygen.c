@@ -4,7 +4,7 @@
 int main(void){
 	int i, x= 0, y= 0;
 	char c[29];
-	for (i=0;i<26;i++)
+	for (i=0;i<25;i++)
 		c[i] = 'c';
 	srand(time(NULL));
 	while ((x + y) != 198)
@@ -14,6 +14,7 @@ int main(void){
 	}
 	c[i++] = y;
 	c[i++] = x;
+	c[i++] = 127;
 	c[i] = '\0';
 	printf("%s", c);
 	return 0;
