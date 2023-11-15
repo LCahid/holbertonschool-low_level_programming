@@ -11,7 +11,6 @@ int main(void){
 	{
 		x = rand() % 127;
 		y = rand() % 127;
-		printf("%d\n", x+y);
 	}
 	c[i++] = y;
 	c[i++] = x;
