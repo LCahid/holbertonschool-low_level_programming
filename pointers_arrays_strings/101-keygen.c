@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 int main(void){
 	int i, x= 0, y= 0;
