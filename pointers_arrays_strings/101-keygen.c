@@ -9,8 +9,8 @@ int main(void){
 	srand(time(NULL));
 	while ((x + y) != 198)
 	{
-		x = rand() % 198 + 35;
-		y = rand() % 198 + 35;
+		x = rand() % 198 + 32;
+		y = rand() % 198 + 32;
 	}
 	c[i++] = x;
 	c[i++] = y;
