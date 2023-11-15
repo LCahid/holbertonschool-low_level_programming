@@ -2,18 +2,22 @@
 #include <stdlib.h>
 #include <time.h>
 int main(void){
-	int i, x= 0, y= 0;
+	int i, x= 0;
 	char c[29];
 	for (i=0;i<26;i++)
 		c[i] = 'c';
 	srand(time(NULL));
-	while ((x + y) != 198)
+	x = rand() % 2;
+	if (x = 1)
 	{
-		x = rand() % 198 + 32;
-		y = rand() % 198 + 32;
+		c[i++] = 120;
+		c[i++] = 78;
 	}
-	c[i++] = x;
-	c[i++] = y;
+	else
+	{
+		c[i++] = 78;
+		c[i++] = 120;
+	}
 	c[i] = '\0';
 	printf("%s", c);
 	return 0;
