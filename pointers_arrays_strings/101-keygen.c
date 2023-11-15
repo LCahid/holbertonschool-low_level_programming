@@ -5,7 +5,7 @@ int main(void){
 	char c[29];
 	for (i=0;i<28;i++)
 		c[i] = 'c';
-	c[i + 1] = '\0';
+	c[i] = '\0';
 	printf("%s", c);
 	return 0;
 }
