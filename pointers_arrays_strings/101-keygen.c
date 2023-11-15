@@ -2,8 +2,10 @@
 
 int main(void){
 	int i;
+	char c[29];
 	for (i=0;i<28;i++)
-		printf("%c", 'c');
-	printf("%c", '\0');
+		c[i] = 'c';
+	c[i] = '\0';
+	printf("%s", c);
 	return 0;
 }
