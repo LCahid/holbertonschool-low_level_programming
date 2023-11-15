@@ -8,7 +8,7 @@ int main(void){
 		c[i] = 'c';
 	srand(time(NULL));
 	x = rand() % 2;
-	if (x = 1)
+	if (x == 1)
 	{
 		c[i++] = 120;
 		c[i++] = 78;
