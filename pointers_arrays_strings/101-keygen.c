@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+/**
+ * main - main func
+ *
+ * Return: always 0
+ */
 int main(void){
 	int i, x= 0, y= 0, z= 0;
 	char c[29];
