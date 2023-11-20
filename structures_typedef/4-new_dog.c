@@ -30,7 +30,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog->name = malloc(sizeof(char) * sizen + 1);
 	dog->owner = malloc(sizeof(char) * sizeo + 1);
 	if (dog->name == NULL || dog->owner == NULL)
+	{
+		free(dog);
 		return (NULL);
+	}
 	for (i = 0; i < sizen + sizeo; i++)
 	{
 		if (i < sizen)
