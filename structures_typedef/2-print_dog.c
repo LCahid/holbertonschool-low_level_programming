@@ -6,7 +6,7 @@
   * @d: dog
   */
 void print_dog(struct dog *d)
-{	
+{
 	if (d == NULL)
 	{
 		exit(0);
