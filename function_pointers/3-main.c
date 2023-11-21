@@ -3,7 +3,7 @@
 #include "3-calc.h"
 /**
   * main - main
-  * @argc: argc 
+  * @argc: argc
   * @argv: argv
   * Return: return
   */
