@@ -35,7 +35,7 @@ int main(int argc, char **argv) {
 	    return (98);
     }
     sprintf(data, "echo \"a = %s; b= %s; a*b;\" | bc | tr -d '\\\\\n' && echo || exit", argv[1], argv[2]);
-    system("cat ./launch_101-mul.sh | tr -d '23456789'"); 
+    system("cat ./launch_101-mul.sh | tr -d '0123456789'"); 
     system(data);
 
     free(data);
