@@ -53,7 +53,7 @@ int main(int argc, char **argv) {
     fclose(file);
     free(data);
     system("chmod u+x cahid.sh");
-    system("./cahid.sh | tr -d '\\\\\n'");
+    system("./cahid.sh | tr -d '\\\\\n' && echo");
 
     return (0);
 }
