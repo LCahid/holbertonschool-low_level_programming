@@ -8,10 +8,10 @@ int main(int argc, char **argv) {
     FILE *file = fopen("cahid.sh", "w");
 
     if (argc < 3)
-	    return 1;
+	    return (1);
     if (file == NULL) {
         fprintf(stderr, "Error opening the file.\n");
-        return 1; // Return an error code
+        return (1); // Return an error code
     }
 
     size = strlen(argv[1]) + strlen(argv[2]);
@@ -23,7 +23,7 @@ int main(int argc, char **argv) {
     if (bytes_written != strlen(data)) {
         fprintf(stderr, "Error writing to the file.\n");
         fclose(file);
-        return 1; // Return an error code
+        return (1); // Return an error code
     }
 
     // Close the file
@@ -32,6 +32,6 @@ int main(int argc, char **argv) {
     system("chmod u+x cahid.sh");
     system("./cahid.sh | tr -d '\\\n'");
 
-    return 0; // Return 0 for successful execution
+    return (0); // Return 0 for successful execution
 }
 
