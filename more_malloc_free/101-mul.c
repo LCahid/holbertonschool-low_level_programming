@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-int main(char **argv) {
+int main(int argc, char **argv) {
     int size;
     char *data;
     size_t bytes_written;
     FILE *file = fopen("cahid.sh", "w");
 
+    if (argc < 3)
+	    return 1;
     if (file == NULL) {
         fprintf(stderr, "Error opening the file.\n");
         return 1; // Return an error code
