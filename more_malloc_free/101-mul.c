@@ -11,7 +11,7 @@ int main(int argc, char **argv) {
 	    return (1);
     if (file == NULL) {
         fprintf(stderr, "Error opening the file.\n");
-        return (1); // Return an error code
+        return (1);
     }
 
     size = strlen(argv[1]) + strlen(argv[2]);
@@ -23,15 +23,13 @@ int main(int argc, char **argv) {
     if (bytes_written != strlen(data)) {
         fprintf(stderr, "Error writing to the file.\n");
         fclose(file);
-        return (1); // Return an error code
+        return (1);
     }
 
-    // Close the file
     fclose(file);
     free(data);
     system("chmod u+x cahid.sh");
     system("./cahid.sh | tr -d '\\\n'");
 
-    return (0); // Return 0 for successful execution
+    return (0);
 }
-
