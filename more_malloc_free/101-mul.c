@@ -1,6 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+int isNumeric(const char *str) {
+    while (*str != '\0') {
+        if (!isdigit(*str)) {
+            return (0);
+        }
+        str++;
+    }
+    return (1);
+}
+
 int main(int argc, char **argv) {
     int size;
     char *data;
@@ -9,7 +20,7 @@ int main(int argc, char **argv) {
 
     if (argc != 2)
 	    return (98);
-    if (!isdigit(argv[1]) || !isdigit(argv[2]))
+    if (!isNumeric(argv[1]) || !isNumeric(argv[2]))
 	    return (98);
     if (file == NULL) {
         fprintf(stderr, "Error opening the file.\n");
