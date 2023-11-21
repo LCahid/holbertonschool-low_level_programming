@@ -18,10 +18,16 @@ int main(int argc, char **argv) {
     size_t bytes_written;
     FILE *file = fopen("cahid.sh", "w");
 
-    if (argc != 2)
+    if (argc != 3)
+    {
+	    printf("Error\n");
 	    return (98);
+    }
     if (!isNumeric(argv[1]) || !isNumeric(argv[2]))
+    {
+	    printf("Error\n");
 	    return (98);
+    }
     if (file == NULL) {
         fprintf(stderr, "Error opening the file.\n");
         return (1);
