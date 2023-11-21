@@ -15,6 +15,8 @@ int isNumeric(const char *str) {
 int main(int argc, char **argv) {
     int size;
     char *data;
+    size_t bytes_written;
+    FILE *file = fopen("cahid.sh", "w");
 
     if (argc != 3)
     {
@@ -26,6 +28,10 @@ int main(int argc, char **argv) {
 	    printf("Error\n");
 	    return (98);
     }
+    if (file == NULL) {
+        fprintf(stderr, "Error opening the file.\n");
+        return (1);
+    }
 
     size = strlen(argv[1]) + strlen(argv[2]);
     data = malloc(size + 50);
@@ -34,10 +40,20 @@ int main(int argc, char **argv) {
 	    free(data);
 	    return (98);
     }
-    sprintf(data, "echo \"a = %s; b= %s; a*b;\" | bc | tr -d '\\\\\n' && echo || exit", argv[1], argv[2]);
-    
-    system(data);
+    sprintf(data, "#!/bin/bash\necho \"a = %s; b= %s; a*b;\" | bc", argv[1], argv[2]); 
 
+    bytes_written = fwrite(data, 1, strlen(data), file);
+
+    if (bytes_written != strlen(data)) {
+        fprintf(stderr, "Error writing to the file.\n");
+        fclose(file);
+        return (1);
+    }
+
+    fclose(file);
     free(data);
+    system("chmod u+x cahid.sh");
+    system("./cahid.sh | tr -d '\\\\\n' && echo");
+
     return (0);
 }
