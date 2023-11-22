@@ -9,6 +9,8 @@ main:
 	mov rdx, len
 	mov rax, 0x1
 	syscall
+	xor rdi, rdi
+	mov rax, 0x0
 	pop rbp
 	ret
 
