@@ -10,12 +10,14 @@ void print_opcode(int (*mp)(int, char **), int a)
 {
 	int i = 0, b;
 
-	while (i < a)
+	while (i < a - 1)
 	{
 		b = ((char *)mp)[i] & 0xff;
 		printf("%02x ", b);
 		i++;
 	}
+	b = ((char *)mp)[i] & 0xff;
+	printf("%02x", b);
 }
 /**
   * main - init
@@ -30,13 +32,13 @@ int main(int argc, char **argv)
 	if (argc != 2)
 	{
 		printf("Error\n");
-		return (1);
+		exit(1);
 	}
 	i = atoi(argv[1]);
 	if (i < 0)
 	{
 		printf("Error\n");
-		return (2);
+		exit(2);
 	}
 	print_opcode(main, i);
 	printf("\n");
