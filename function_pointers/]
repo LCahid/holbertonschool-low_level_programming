@@ -1,0 +1,45 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+/**
+  * print_opcode - opcode
+  * @mp: main pointer
+  */
+void print_opcode(int (*mp)(int, char **), char *a)
+{
+	int k = atoi(a), i = 0;
+
+	while (i < k)
+	{
+		printf("%x ", *(mp + i));
+		i++;
+	}
+}
+/**
+  * main - init
+  * @argc: array
+  * @argv: size
+  * Return: int
+  */
+int main(int argc, char **argv)
+{
+	int i, a = 0;
+
+	if (argc != 2)
+	{
+		printf("Error");
+		return (1);
+	}
+	i = atoi(argv[1]);
+	if (i < 0)
+	{
+		printf("Error");
+		return (2);
+	}
+	while (a < i)
+	{
+		printf("%p ", (main + i));
+		a++;
+	}
+	return (0);
+}
