@@ -38,8 +38,7 @@ int main(int argc, char **argv)
 	}
 	while (a < i)
 	{
-		k = *(int *)(main + a) & 0xff;
-		printf("%02x ", k);
+		printf("%02x ", (char *)(main)[a]);
 		a++;
 	}
 	printf("\n");
