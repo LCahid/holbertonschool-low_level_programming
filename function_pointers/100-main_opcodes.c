@@ -24,6 +24,7 @@ void print_opcode(int (*mp)(int, char **), char *a)
 int main(int argc, char **argv)
 {
 	int i, a = 0, k;
+	unsigned char deyer;
 
 	if (argc != 2)
 	{
@@ -38,7 +39,8 @@ int main(int argc, char **argv)
 	}
 	while (a < i)
 	{
-		printf("%02x ", (char *)(main)[a]);
+		deyer = ((char *)main)[a];
+		printf("%02x ", deyer);
 		a++;
 	}
 	printf("\n");
