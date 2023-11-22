@@ -4,14 +4,16 @@
 /**
   * print_opcode - opcode
   * @mp: main pointer
+  * @a: a
   */
 void print_opcode(int (*mp)(int, char **), char *a)
 {
-	int k = atoi(a), i = 0;
+	int k = atoi(a), i = 0, b;
 
 	while (i < k)
 	{
-		printf("%p", mp);
+		b = ((char *)mp)[i] & 0xff;
+		printf("%02x ", b);
 		i++;
 	}
 }
@@ -24,7 +26,6 @@ void print_opcode(int (*mp)(int, char **), char *a)
 int main(int argc, char **argv)
 {
 	int i, a = 0, k;
-	unsigned char deyer;
 
 	if (argc != 2)
 	{
@@ -37,12 +38,7 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		return (2);
 	}
-	while (a < i)
-	{
-		deyer = ((char *)main)[a];
-		printf("%02x ", deyer);
-		a++;
-	}
+	print_opcode(main, argv[1]);
 	printf("\n");
 	return (0);
 }
