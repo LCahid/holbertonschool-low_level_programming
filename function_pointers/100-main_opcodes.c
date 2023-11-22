@@ -6,11 +6,11 @@
   * @mp: main pointer
   * @a: a
   */
-void print_opcode(int (*mp)(int, char **), char *a)
+void print_opcode(int (*mp)(int, char **), int a)
 {
-	int k = atoi(a), i = 0, b;
+	int i = 0, b;
 
-	while (i < k)
+	while (i < a)
 	{
 		b = ((char *)mp)[i] & 0xff;
 		printf("%02x ", b);
@@ -38,7 +38,7 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		return (2);
 	}
-	print_opcode(main, argv[1]);
+	print_opcode(main, i);
 	printf("\n");
 	return (0);
 }
