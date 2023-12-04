@@ -19,12 +19,13 @@ list_t *add_node_end(list_t **head, const char *str)
 	temp->str = strdup(str);
 	temp->len = strlen(str);
 	temp->next = NULL;
-	tmp = *temp;
+	tmp = *head;
 	if (*head)
 	{
 		while (tmp->next)
 			tmp = tmp->next;
 		tmp->next = temp;
+	}
 	else
 		*head = temp;
 	return (temp);
