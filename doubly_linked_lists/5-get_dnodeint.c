@@ -2,22 +2,25 @@
 #include <stdio.h>
 #include "lists.h"
 /**
-  * get_dnodeint_at_index - get node at index 
+  * get_dnodeint_at_index - get node at index
   * @head: head node
   * @index: index of value
+  * Return: Node
   */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	unsigned int a = 0;
+	dlistint_t *temp;
 
 	if (!head)
 		return (NULL);
-	while(head || a != index - 1)
+	temp = head;
+	while (temp || a != index)
 	{
-		head = head->next;
+		temp = temp->next;
 		a++;
 	}
 	if (a != index)
 		return (NULL);
-	return (head);
+	return (temp);
 }
