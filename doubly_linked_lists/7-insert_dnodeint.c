@@ -30,12 +30,12 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		a++;
 		if (a == idx)
 		{
-			buf->next = temp->next;
-			buf->prev = temp;
-			break;
+			buf->next = temp;
+			buf->prev = temp->prev;
+			return (buf);
 		}
 	}
 	if (a == idx - 1)
 		return (add_dnodeint_end(h, n));
-	return (buf);
+	return (NULL);
 }
