@@ -1,8 +1,8 @@
 /**
-  * flip_bits - sets the value of a bit to 0 at given index
-  * @n: number
-  * @index: index of bit which this function returns
-  * Return: the value of a bit at a given index. if error ocured -1
+  * flip_bits -  returns the number of bits you would need to flip to get from one number to another.
+  * @n: first number
+  * @m: second number
+  * Return: returns the number of bits you would need to flip to get from one number to another.
   */
 int flip_bits(unsigned long int n, unsigned long int m)
 {
