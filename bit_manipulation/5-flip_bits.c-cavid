@@ -1,0 +1,19 @@
+/**
+  * flip_bits - sets the value of a bit to 0 at given index
+  * @n: number
+  * @index: index of bit which this function returns
+  * Return: the value of a bit at a given index. if error ocured -1
+  */
+int flip_bits(unsigned long int n, unsigned long int m)
+{
+	unsigned int k = n ^ m;
+	int counter = 0;
+
+	while (k)
+	{
+		if (k == 1)
+			counter++;
+		k >>= 1;
+	}
+	return (counter);
+}
