@@ -27,7 +27,8 @@ int _cp(const char *file_from, const char *file_to)
 				file_to), exit(99);
 	while (len == BUFF)
 	{
-		if (read(fdf, content, BUFF) == -1)
+		len = read(fdf, content, BUFF);
+		if (len == -1)
 			dprintf(STDERR_FILENO, 
 					"Error: Can't read from file %s\n", 
 					file_from), exit(98);
