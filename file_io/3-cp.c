@@ -18,32 +18,32 @@ int _cp(const char *file_from, const char *file_to)
 	fdt = open(file_to, O_RDWR | O_TRUNC | O_CREAT, 0664);
 	fdf = open(file_from, O_RDONLY);
 	if (fdf == -1)
-		dprintf(STDERR_FILENO, 
-				"Error: Can't read from file %s\n", 
+		dprintf(STDERR_FILENO,
+				"Error: Can't read from file %s\n",
 				file_from), exit(98);
 	if (fdt == -1)
-		dprintf(STDERR_FILENO, 
-				"Error: Can't write to %s\n", 
+		dprintf(STDERR_FILENO,
+				"Error: Can't write to %s\n",
 				file_to), exit(99);
 	while (len > 0)
 	{
 		len = read(fdf, content, BUFF);
 		if (len == -1)
-			dprintf(STDERR_FILENO, 
-					"Error: Can't read from file %s\n", 
+			dprintf(STDERR_FILENO,
+					"Error: Can't read from file %s\n",
 					file_from), exit(98);
 		if (write(fdt, content, len) == -1)
-			dprintf(STDERR_FILENO, 
-					"Error: Can't write to %s\n", 
+			dprintf(STDERR_FILENO,
+					"Error: Can't write to %s\n",
 					file_to), exit(99);
 	}
 	if (close(fdf) == -1)
-		dprintf(STDERR_FILENO, 
-				"Error: Can't close fd %d\n", 
+		dprintf(STDERR_FILENO,
+				"Error: Can't close fd %d\n",
 				fdf), exit(100);
 	if (close(fdt) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdt), exit(100);
-	return (1);
+	return (0);
 }
 
 /**
