@@ -31,7 +31,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	else
 	{
 		temp = ht->array[index];
-		while (temp->next)
+		do
 		{
 			if (!strcmp(temp->key, key))
 			{
@@ -40,6 +40,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			}
 			temp = temp->next;
 		}
+		while (temp->next);
 		buf = malloc(sizeof(hash_node_t *));
 		if (!buf)
 			return (0);
