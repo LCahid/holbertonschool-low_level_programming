@@ -32,11 +32,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		temp = ht->array[index];
 		while (temp->next)
-			if (!strcmp(ht->array[index]->key, key))
+		{
+			if (!strcmp(temp->key, key))
 			{
-				ht->array[index]->value = strdup(value);
+				temp->value = strdup(value);
 				return (1);
 			}
+			temp = temp->next;
+		}
 		buf = malloc(sizeof(hash_node_t *));
 		if (!buf)
 			return (0);
