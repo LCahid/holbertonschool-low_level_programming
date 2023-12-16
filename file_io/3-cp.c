@@ -15,7 +15,7 @@ int _cp(const char *file_from, const char *file_to)
 	int fdf, fdt, len = BUFF;
 	char *content = malloc(BUFF);
 
-	fdt = open(file_to, O_RDWR | O_TRUNC | O_CREAT, 0664);
+	fdt = open(file_to, O_WRONLY | O_TRUNC | O_CREAT, 0664);
 	fdf = open(file_from, O_RDONLY);
 	if (fdf == -1)
 		dprintf(STDERR_FILENO,
