@@ -48,8 +48,9 @@ int _cp(const char *file_from, const char *file_to)
 
 /**
   * main - main function
-  * @argc - number of arguments
-  * @argv - arguments
+  * @argc: number of arguments
+  * @argv: arguments
+  * Return: Salam
   */
 int main(int argc, char **argv)
 {
