@@ -3,7 +3,7 @@
 #include <fcntl.h>
 #include "hash_tables.h"
 /**
-  * hash_table_create - reads a text file and prints it to the POSIX standard outpu
+  * hash_table_create - creates hash table
   * @size: size
   * Return:  actual number of letters it could read and print
   */
@@ -13,7 +13,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	t->size = size;
 	t->array = malloc(sizeof(int *) * size);
-	if (!t->array)
+	if (!(t->array))
 		return (NULL);
 	return (t);
 }
